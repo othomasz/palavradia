@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palavra do Dia</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="palavra"; title="dfd">5</h1>
+
+  <script>
+	function palavradodia() {
+		const cores = [
+			"Tomato",
+			"Orange",
+			"DodgerBlue",
+			"MediumSeaGreen",
+			"Gray",
+			"SlateBlue",
+			"Violet",
+			"LightGray"
+		];
+		
+		const emojis = [
+			"🔴",
+			"🟠",
+			"🔵",
+			"🟢",
+			"️⬛",
+			"🟣",
+			"🟥",
+			"⚙"
+		];
+		
+		const palavras = [
+			"oi",
+			"tudo",
+			"bem",
+			"esse",
+			"site",
+			"é",
+			"uma",
+			"palavra",
+			"diferente",
+			"todo",
+			"dia"
+		];
+		
+		const hoje = new Date();
+		const diaReferencia = new Date(2025, 4, 24);
+		const diffDias = Math.floor((hoje - diaReferencia)/(1000*60*60*24));
+		const index = diffDias % palavras.length;
+		
+		
+		document.getElementById('palavra').style.color = cores[diffDias % cores.length];
+		document.getElementById('palavra').textContent = palavras[index];
+		document.getElementById('palavra').title = emojis[diffDias % cores.length];
+		
+		
+		return palavras[index];
+	};
+	
+
+		document.title = palavradodia();
+  </script>
+
+</body>
+</html>
