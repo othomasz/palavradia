@@ -1,3 +1,3 @@
 # palavradia
 
-é uma palavra *todo dia**
+é uma palavra *todo dia*
